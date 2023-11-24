@@ -8,5 +8,20 @@
 <body>
     <p>Привет это основная часть кода</p>
     <p> ekzkz</p>
+    <script>
+    function rndFormat (text) {
+ let tags = [
+  '<i>',  '<b>',  '<u>',  '<sup>',  '<sub>',  '<big>',  '<small>'
+ ];
+ let result = '';
+ for (let i=0; i<text.length; i++) {
+  let num=Math.floor(Math.random()*tags.length);
+  result += tags[num] + text[i] + '</' + tags[num].substring(1);
+ }
+ return result;
+}
+document.getElementById('captcha').innerHTML = rndFormat('Hello!');
+
+    <script>
 </body>
 </html>
